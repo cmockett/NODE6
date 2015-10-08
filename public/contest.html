@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Video Contest</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js" type="text/javascript"></script>
+</head>
+<body ng-controller="myController">
+	<form ng-submit="submitVideo()">
+		<input ng-model="videoContest.name" placeholder="Name"><br>
+		<input ng-model="videoContest.URL" placeholder="URL"><br>
+		<input ng-model="videoContest.title" placeholder="Title"><br>
+		<input ng-model="videoContest.description" placeholder="Description">
+		<input type="submit">
+	</form>
+
+	
+
+	<script src="main.js"></script>
+</body>
+</html>
