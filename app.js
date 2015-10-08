@@ -25,19 +25,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 
-//Routes!
-// var videoController= require('./controllers/videoController')
-
-// app.get('/', function(req, res){
-//   res.send("hello")
-//     // 'contest.html', {root : './public'})
-// })
-// app.post('/submitvideo', videoController.submitVideo)
-// // app.get('/getvideos', videoController.getvideos)
-
-
-
-
 var port = 3000
 app.listen(port, function(){
   console.log("listening to motherfucking port " + port)
