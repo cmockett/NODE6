@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Submissions</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js" type="text/javascript"></script>
+</head>
+<body ng-controller="myController">
+<p>{{video.name}}</p>
+	<div ng-repeat="video in allVideos | limitTo: 8">
+		<iframe width="560" height="315" src="{{$sce.trustAsResourceUrl(video.URL)}}" frameborder="0" allowfullscreen></iframe>
+		<input type="checkbox" name="vote" value="vote" ng-model="newVideo.vote"><a href="/vote"></a>Vote For This Video
+	</div>
+
+
+	<script src="main.js"></script>
+</body>
+</html>

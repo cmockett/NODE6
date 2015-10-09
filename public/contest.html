@@ -12,9 +12,7 @@
 		<input ng-model="newVideo.description" placeholder="Description">
 		<input type="submit">
 	</form>
-	<div ng-repeat="video in allVideos">
-		<iframe width="560" height="315" src="{{$sce.trustAsResourceUrl(video.URL)}}" frameborder="0" allowfullscreen></iframe>
-	</div>
+	<button><a href="/submissions">View Submissions</a></button>
 	
 
 	<script src="main.js"></script>

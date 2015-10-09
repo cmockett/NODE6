@@ -9,7 +9,12 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/submitvideo', videoController.submitVideo)
+//calls the submitVideo function inside videoController, ditto with getVideos on next line!!
 router.get('/getvideos', videoController.getVideos)
+router.get('/submissions', function(req, res){
+	res.sendFile('submissions.html', {root : './public'})
+})
+router.post('/vote', videoController.vote)
 
 
 
