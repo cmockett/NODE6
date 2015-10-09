@@ -6,13 +6,15 @@
 </head>
 <body ng-controller="myController">
 	<form ng-submit="submitVideo()">
-		<input ng-model="videoContest.name" placeholder="Name"><br>
-		<input ng-model="videoContest.URL" placeholder="URL"><br>
-		<input ng-model="videoContest.title" placeholder="Title"><br>
-		<input ng-model="videoContest.description" placeholder="Description">
+		<input ng-model="newVideo.name" placeholder="Name"><br>
+		<input ng-model="newVideo.URL" placeholder="URL"><br>
+		<input ng-model="newVideo.title" placeholder="Title"><br>
+		<input ng-model="newVideo.description" placeholder="Description">
 		<input type="submit">
 	</form>
-
+	<div ng-repeat="video in allVideos">
+		<iframe width="560" height="315" src="{{$sce.trustAsResourceUrl(video.URL)}}" frameborder="0" allowfullscreen></iframe>
+	</div>
 	
 
 	<script src="main.js"></script>

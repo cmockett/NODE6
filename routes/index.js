@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/submitvideo', videoController.submitVideo)
-// app.get('/getvideos', videoController.getvideos)
+router.get('/getvideos', videoController.getVideos)
 
 
 
